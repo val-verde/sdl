@@ -63,17 +63,6 @@
  */
 #define SDL_MAIN_NEEDED
 
-#elif defined(__ANDROID__)
-/* On Android SDL provides a Java class in SDLActivity.java that is the
-   main activity entry point.
-
-   See docs/README-android.md for more details on extending that class.
- */
-#define SDL_MAIN_NEEDED
-
-/* We need to export SDL_main so it can be launched from Java */
-#define SDLMAIN_DECLSPEC    DECLSPEC
-
 #elif defined(__NACL__)
 /* On NACL we use ppapi_simple to set up the application helper code,
    then wait for the first PSE_INSTANCE_DIDCHANGEVIEW event before 
