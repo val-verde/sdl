@@ -966,7 +966,7 @@ endif()
 # Platform-specific options and settings
 if(ANDROID)
   file(GLOB ANDROID_CORE_SOURCES ${SDL2_SOURCE_DIR}/src/core/android/*.c)
-  set(SOURCE_FILES ${SOURCE_FILES} ${ANDROID_CORE_SOURCES} ${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c)
+  set(SOURCE_FILES ${SOURCE_FILES} ${ANDROID_CORE_SOURCES})
 
   file(GLOB ANDROID_MISC_SOURCES ${SDL2_SOURCE_DIR}/src/misc/android/*.c)
   set(SOURCE_FILES ${SOURCE_FILES} ${ANDROID_MISC_SOURCES})
