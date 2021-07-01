@@ -627,7 +627,7 @@ macro(CheckWayland)
     pkg_check_modules(WAYLAND wayland-client wayland-scanner wayland-egl wayland-cursor egl xkbcommon)
     pkg_check_modules(WAYLAND_SCANNER_1_15 "wayland-scanner>=1.15")
 
-    if(WAYLAND_FOUND)
+    if(WAYLAND_FOUND AND NOT WAYLAND_SCANNER)
       execute_process(
         COMMAND ${PKG_CONFIG_EXECUTABLE} --variable=wayland_scanner wayland-scanner
         WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
